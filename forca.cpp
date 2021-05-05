@@ -9,16 +9,46 @@ int main()
 	int acertou=0;
 	int enforcou = 0;
 //	printf("%d | %d",acertou,!acertou);
-	
+	char chutes[26];
+	int tentativas = 0;
 	do{
-		char chute;
-		scanf("%c",&chute);
+		
 		for(int i=0;i<strlen(palavra);i++)
 		{
-			if(palavra[i]==chute)
+			int achou=0;
+			for(int j=0;j<tentativas;j++)
 			{
-				printf("A posição %d tem essa letra! \n",i);
+				if(chutes[j]==palavra[i])
+				{
+					achou=1;
+					break;
+				}
 			}
+			if(achou)
+			{
+				printf("%c",palavra[i]);
+			}
+			else
+			{
+				printf("_ ");	
+			}
+				
+			
+			
+			
+			
+		
 		}
+		printf("\n");
+		
+		
+		char chute;
+		scanf(" %c",&chute);
+		chutes[tentativas]=chute;
+		tentativas++;
+        
+        
+        
+        
 	}while(!acertou  && !enforcou);
 }
