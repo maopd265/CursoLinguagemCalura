@@ -7,3 +7,6 @@ void abertura();
 	int acertou();
 	int jaChutou(char letra);
 void adicionaPalavra();
+void desenhaforca();
+int chuteserrados();
+int letraexiste(char letra);
